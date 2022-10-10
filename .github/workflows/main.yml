@@ -1,0 +1,37 @@
+# Separate to the main build workflow for access to develop
+# environment secrets, largely similar to build.yaml.
+name: Build and Package develop
+on:
+  push:
+    branches: [ develop ]
+  repository_dispatch:
+    types: [ element-web-notify ]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: true
+jobs:
+  build:
+    name: "Build"
+    # Only respect triggers from our develop branch, ignore that of forks
+    if: github.repository == 'scheissegalo/kb-web'
+    runs-on: ubuntu-latest
+    environment: develop
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: "./scripts/layered.sh"
+
+      - run: mv dist/element-*.tar.gz dist/develop.tar.gz
+
+      # We keep the latest develop.tar.gz as the artifact uploaded later expires after 24 and requires auth to download
+      # Element Desktop's fetch script uses this tarball to fetch latest develop to build Nightlies.
+      - name: Deploy develop.tar.gz to Github Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          single-commit: true
