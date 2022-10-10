@@ -35,7 +35,7 @@ jobs:
           SENTRY_ORG: kb-chat
           SENTRY_PROJECT: kb-chat
 
-      - run: mv dist/kb-chat-*.tar.gz webapp.tar.gz
+      - run: mv dist/element-*.tar.gz webapp.tar.gz
       
       - name: Wait for other steps to succeed
         uses: lewagon/wait-on-check-action@v1.0.0
