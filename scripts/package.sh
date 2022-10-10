@@ -16,15 +16,15 @@ VERSION=$version yarn build
 cp config.sample.json webapp/
 
 mkdir -p dist
-cp -r webapp element-$version
+cp -r webapp kb-web-$version
 
 # Just in case you have a local config, remove it before packaging
-rm element-$version/config.json || true
+rm kb-web-$version/config.json || true
 
-$(dirname $0)/normalize-version.sh ${version} > element-$version/version
+$(dirname $0)/normalize-version.sh ${version} > kb-web-$version/version
 
-tar chvzf dist/element-$version.tar.gz element-$version
-rm -r element-$version
+tar chvzf dist/kb-web-$version.tar.gz kb-web-$version
+rm -r kb-web-$version
 
 echo
-echo "Packaged dist/element-$version.tar.gz"
+echo "Packaged dist/kb-web-$version.tar.gz"
