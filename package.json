@@ -1,6 +1,6 @@
 {
   "name": "kb-web",
-  "version": "1.13.1",
+  "version": "1.14.0",
   "description": "A feature-rich client for Matrix.org",
   "author": "New Vector Ltd.",
   "repository": {
