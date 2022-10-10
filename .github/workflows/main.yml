@@ -26,7 +26,7 @@ jobs:
       - name: Install Dependencies
         run: "./scripts/layered.sh"
 
-      - run: mv dist/element-*.tar.gz dist/develop.tar.gz
+      - run: mv dist/kb-web-*.tar.gz dist/develop.tar.gz
 
       # We keep the latest develop.tar.gz as the artifact uploaded later expires after 24 and requires auth to download
       # Element Desktop's fetch script uses this tarball to fetch latest develop to build Nightlies.
