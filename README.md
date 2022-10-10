@@ -1,4 +1,4 @@
-KB-Chat
+KB-Chat Web UI
 =======
 
 KB-Chat is a Matrix web client built using the [Matrix
