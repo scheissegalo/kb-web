@@ -1,11 +1,11 @@
 {
-    "name": "element-web",
-    "version": "1.11.39",
+    "name": "n-app-web",
+    "version": "1.11.55",
     "description": "A feature-rich client for Matrix.org",
-    "author": "New Vector Ltd.",
+    "author": "Karich.Design",
     "repository": {
         "type": "git",
-        "url": "https://github.com/vector-im/element-web"
+        "url": "https://github.com/scheissegalo/kb-web"
     },
     "license": "Apache-2.0",
     "files": [

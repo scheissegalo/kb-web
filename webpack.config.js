@@ -23,7 +23,7 @@ crypto.createHash = (algorithm, options) => createHash(algorithm === "md4" ? "sh
 
 dotenv.config();
 let ogImageUrl = process.env.RIOT_OG_IMAGE_URL;
-if (!ogImageUrl) ogImageUrl = "https://app.element.io/themes/element/img/logos/opengraph.png";
+if (!ogImageUrl) ogImageUrl = "https://app.north-industries.com/themes/element/img/logos/opengraph.png";
 
 if (!process.env.VERSION) {
     console.warn("Unset VERSION variable - this may affect build output");
