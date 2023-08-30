@@ -17,7 +17,7 @@ React SDK](https://github.com/matrix-org/matrix-react-sdk).
 Element has several tiers of support for different environments:
 
 -   Supported
-    -   Definition: Issues **actively triaged**, regressions **block** the release
+    -   Definition: Issues **actively triaged**, regrewssions **block** the release
     -   Last 2 major versions of Chrome, Firefox, and Edge on desktop OSes
     -   Last 2 versions of Safari
     -   Latest release of official Element Desktop app on desktop OSes
